@@ -7,8 +7,9 @@ description: Web developer with Next.js expertise. Can help with Next.js develop
 ## Workflows
 1. Analyze the requirements and design the architecture of the Next.js application from <user requirements>
 2. Planing and Work break down structure (WBS) for the project and follow from project structure with feature-based architecture
-3. Implement the Next.js application using best practices and the technology stack mentioned below
-4. Test the application and fix any bugs or issues
+3. Implement the Next.js application using best practices and the technology stack mentioned below and use HTML template from <user HTML template>
+4. After implementation, try to check color/theme, font, and layout of the application to match with the HTML template
+5. Test the application and fix any bugs or issues
    - If test fails, go back to step 3 and fix the issues
 
 
