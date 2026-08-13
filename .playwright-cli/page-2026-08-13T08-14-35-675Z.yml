@@ -1,0 +1,37 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: shield_lock
+      - generic [ref=e6]:
+        - heading "Sign In to Your Account" [level=1] [ref=e7]
+        - paragraph [ref=e8]: Enter your credentials to access the secure portal.
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: Username or Email
+          - generic [ref=e12]:
+            - generic: person
+            - textbox "Username or Email" [ref=e13]:
+              - /placeholder: name@company.com
+        - generic [ref=e14]:
+          - generic [ref=e15]: Password
+          - generic [ref=e16]:
+            - generic: lock
+            - textbox "Password" [ref=e17]:
+              - /placeholder: ••••••••
+            - button "Toggle password visibility" [ref=e18]:
+              - generic [ref=e19]: visibility_off
+        - generic [ref=e20]:
+          - generic [ref=e21] [cursor=pointer]:
+            - checkbox "Remember me" [ref=e22]
+            - generic [ref=e23]: Remember me
+          - link "Forgot password?" [ref=e24] [cursor=pointer]:
+            - /url: "#"
+        - button "Sign In arrow_forward" [ref=e25]:
+          - text: Sign In
+          - generic [ref=e26]: arrow_forward
+      - generic [ref=e27]:
+        - text: New to EnterpriseSecure?
+        - link "Sign up" [ref=e28] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e34] [cursor=pointer]
+  - alert [ref=e38]
