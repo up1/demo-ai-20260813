@@ -90,8 +90,8 @@ func seedUser(t *testing.T, username, plainPassword string) int64 {
 	var id int64
 	err = testPool.QueryRow(
 		context.Background(),
-		`INSERT INTO users (username, password) VALUES ($1, $2) RETURNING user_id`,
-		username, hashed,
+		`INSERT INTO users (username, password, address) VALUES ($1, $2, $3) RETURNING user_id`,
+		username, hashed, "123 Main St, City, Country",
 	).Scan(&id)
 	require.NoError(t, err)
 

@@ -20,6 +20,7 @@ type loginRequest struct {
 type loginData struct {
 	UserID   int64  `json:"user_id"`
 	Username string `json:"username"`
+	Address  string `json:"address"`
 	Token    string `json:"token"`
 }
 
@@ -67,6 +68,7 @@ func (h *UserHandler) Login(c fiber.Ctx) error {
 	return c.Status(fiber.StatusOK).JSON(response.Success("Login successful", loginData{
 		UserID:   result.UserID,
 		Username: result.Username,
+		Address:  result.Address,
 		Token:    result.Token,
 	}))
 }

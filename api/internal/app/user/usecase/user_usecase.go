@@ -14,6 +14,7 @@ import (
 type LoginResult struct {
 	UserID   int64
 	Username string
+	Address  string
 	Token    string
 }
 
@@ -86,6 +87,7 @@ func (u *userUsecase) Login(ctx context.Context, username, plainPassword string)
 	return &LoginResult{
 		UserID:   user.UserID,
 		Username: user.Username,
+		Address:  user.Address,
 		Token:    token,
 	}, nil
 }

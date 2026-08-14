@@ -18,6 +18,7 @@ func TestLogin_ValidCredentials_ReturnsToken(t *testing.T) {
 	assert.Equal(t, "Login successful", body.Message)
 	assert.Equal(t, userID, body.Data.UserID)
 	assert.Equal(t, "somkiat", body.Data.Username)
+	assert.Equal(t, "123 Main St, City, Country", body.Data.Address)
 	assert.NotEmpty(t, body.Data.Token)
 }
 

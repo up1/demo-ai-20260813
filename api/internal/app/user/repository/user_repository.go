@@ -23,7 +23,7 @@ func NewUserRepository(pool *pgxpool.Pool) domain.UserRepository {
 
 func (r *userRepository) GetByUsername(ctx context.Context, username string) (*domain.User, error) {
 	const query = `
-		SELECT user_id, username, password, token, failed_login_attempts, locked_until, created_at, updated_at
+		SELECT user_id, username, password, address, token, failed_login_attempts, locked_until, created_at, updated_at
 		FROM users
 		WHERE username = $1`
 
@@ -32,6 +32,7 @@ func (r *userRepository) GetByUsername(ctx context.Context, username string) (*d
 		&u.UserID,
 		&u.Username,
 		&u.Password,
+		&u.Address,
 		&u.Token,
 		&u.FailedLoginAttempts,
 		&u.LockedUntil,

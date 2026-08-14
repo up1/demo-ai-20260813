@@ -55,6 +55,7 @@ func newHashedUser(id int64, username, plainPassword string) *domain.User {
 		UserID:   id,
 		Username: username,
 		Password: hashed,
+		Address:  "123 Main St, City, Country",
 	}
 }
 
@@ -79,6 +80,7 @@ func TestLogin_Success(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, int64(1), result.UserID)
 	assert.Equal(t, "somkiat", result.Username)
+	assert.Equal(t, "123 Main St, City, Country", result.Address)
 	assert.Equal(t, "signed-token", result.Token)
 	repo.AssertExpectations(t)
 }

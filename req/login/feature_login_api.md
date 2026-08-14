@@ -21,8 +21,10 @@
   "data": {
     "user_id": 1,
     "username": "somkiat",
+    "address": "123 Main St, City, Country",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6InNvbWtpYXQiLCJleHAiOjE2MzQyNzY4MDB9.abc123"
   }
+}
 ```
 
 * Response with 400 with input validation error 

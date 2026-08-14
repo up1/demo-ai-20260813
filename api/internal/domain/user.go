@@ -20,6 +20,7 @@ type User struct {
 	UserID              int64
 	Username            string
 	Password            string
+	Address             string
 	Token               string
 	FailedLoginAttempts int
 	LockedUntil         *time.Time
